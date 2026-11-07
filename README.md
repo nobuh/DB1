@@ -1,0 +1,10 @@
+### File
+
+javac -cp bin -d bin src/simpledb/file/BlockId.java
+javac -cp bin -d bin src/simpledb/file/Page.java
+javac -cp bin -d bin src/simpledb/file/FileMgr.java
+javac -cp bin -d bin src/simpledb/server/SimpleDB.java
+javac -cp bin -d bin src/simpledb/file/FileTest.java
+java -cp bin simpledb.file.FileTest
+
+###  
