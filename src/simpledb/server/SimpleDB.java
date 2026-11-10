@@ -3,6 +3,7 @@ package simpledb.server;
 import java.io.File;
 
 import simpledb.file.FileMgr;
+import simpledb.log.LogMgr;
 
 public class SimpleDB {
    public static int BLOCK_SIZE = 400;
@@ -10,10 +11,13 @@ public class SimpleDB {
    public static String LOG_FILE = "simpledb.log";
 
    private  FileMgr     fm;
+   private  LogMgr      lm;
 
    public SimpleDB(String dirname, int blocksize, int buffsize) {
       File dbDirectory = new File(dirname);
       fm = new FileMgr(dbDirectory, blocksize);
+      lm = new LogMgr(fm, LOG_FILE);
+
    }
    
    public SimpleDB(String dirname) {
@@ -23,4 +27,8 @@ public class SimpleDB {
    public FileMgr fileMgr() {
       return fm;
    }   
+
+   public LogMgr logMgr() {
+       return lm;
+   }
  }

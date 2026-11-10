@@ -1,5 +1,7 @@
 package simpledb.log;
 
+import java.util.Iterator;
+
 import simpledb.file.Page;
 import simpledb.server.SimpleDB;
 
@@ -11,7 +13,7 @@ public class LogTest {
         lm = db.logMgr();
         createRecords(1, 35);
         printLogRecords("The log file now has these records:");
-        craeteRecords(35, 70);
+        createRecords(36, 70);
         lm.flush(65);
         printLogRecords("The log file now has these records:");
     }
@@ -44,8 +46,8 @@ public class LogTest {
         int npos = Page.maxLength(s.length());
         byte[] b = new byte[npos + Integer.BYTES];
         Page p = new Page(b);
-        p.getString(0, s);
-        p.getInt(npos, n);
+        p.setString(0, s);
+        p.setInt(npos, n);
         return b;
     }
 }
