@@ -19,3 +19,6 @@ javac -cp bin -d bin src/simpledb/server/SimpleDB.java
 javac -cp bin -d bin src/simpledb/log/LogTest.java
 java -cp bin simpledb.log.LogTest
 
+- Buffer
+
+javac -cp bin -d bin src/simpledb/buffer/Buffer.java
