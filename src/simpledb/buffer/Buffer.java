@@ -20,7 +20,7 @@ public class Buffer {
         contents = new Page(fm.blockSize());
     }
 
-    public Page contetns() {
+    public Page contents() {
         return contents;
     }
 
@@ -41,7 +41,7 @@ public class Buffer {
         return txnum;
     }
 
-    void assingToBlock(BlockId b) {
+    void assignToBlock(BlockId b) {
         flush();
         blk = b;
         fm.read(blk, contents);

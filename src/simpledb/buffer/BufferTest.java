@@ -1,4 +1,9 @@
-public class BufferTeset {
+package simpledb.buffer;
+
+import simpledb.file.*;
+import simpledb.server.SimpleDB;
+
+public class BufferTest {
     public static void main(String[] args) {
         SimpleDB db = new SimpleDB("buffertest", 400, 3); // バッファ数は３
         BufferMgr bm = db.bufferMgr();

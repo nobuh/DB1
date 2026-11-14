@@ -22,3 +22,11 @@ java -cp bin simpledb.log.LogTest
 - Buffer
 
 javac -cp bin -d bin src/simpledb/buffer/Buffer.java
+javac -cp bin -d bin src/simpledb/buffer/BufferAbortException.java
+javac -cp bin -d bin src/simpledb/buffer/BufferMgr.java
+javac -cp bin -d bin src/simpledb/server/SimpleDB.java
+javac -cp bin -d bin src/simpledb/buffer/BufferTest.java
+java -cp bin simpledb.buffer.BufferTest
+
+javac -cp bin -d bin src/simpledb/buffer/BufferMgrTest.java
+java -cp bin simpledb.buffer.BufferMgrTest

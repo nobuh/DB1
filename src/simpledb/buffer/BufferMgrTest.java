@@ -1,5 +1,10 @@
+package simpledb.buffer;
+
+import simpledb.file.*;
+import simpledb.server.SimpleDB;
+
 public class BufferMgrTest {
-    public static void main(String[] args) thorws Exception {
+    public static void main(String[] args) throws Exception {
         SimpleDB db = new SimpleDB("buffermgrtest", 400, 3);
         BufferMgr bm = db.bufferMgr();
 

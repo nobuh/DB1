@@ -1,0 +1,3 @@
+[submodule "sciore-simpledb-3.4"]
+	path = sciore-simpledb-3.4
+	url = https://github.com/eatonphil/sciore-simpledb-3.4
